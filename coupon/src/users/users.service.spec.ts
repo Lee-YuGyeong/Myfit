@@ -1,18 +1,33 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { UserRepository } from './users.repository';
 import { UsersService } from './users.service';
 
 describe('UsersService', () => {
-  let service: UsersService;
+  let userService;
+  let userRepository;
+
+  const mockUserRepository = () => ({
+    find: jest.fn(),
+    findOne: jest.fn(),
+  });
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [UsersService],
+      providers: [
+        UsersService,
+        {
+          provide: UserRepository,
+          useFactory: mockUserRepository,
+        },
+    ],
     }).compile();
 
-    service = module.get<UsersService>(UsersService);
+    userService = await module.get<UsersService>(UsersService);
+    userRepository = await module.get<UserRepository>(UserRepository)
+
   });
 
   it('should be defined', () => {
-    expect(service).toBeDefined();
+    expect(userService).toBeDefined();
   });
 });
