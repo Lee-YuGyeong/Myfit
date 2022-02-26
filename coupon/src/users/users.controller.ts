@@ -21,11 +21,9 @@ export class UsersController {
 
     @Post() 
     async save(@Body() createUserDto: CreateUserDto){
-      const hash_password = await this.change_hash(createUserDto.password);
-      createUserDto.password = hash_password;
+      createUserDto.password = await this.changeHash(createUserDto.password);
       return this.userservice.save(createUserDto);
     }
-
 
     @Get() 
     async findAll(){
@@ -33,18 +31,13 @@ export class UsersController {
     }
 
     
-  private async check_hash(password: string) : Promise<boolean>{
-    const hash = await this.change_hash(password);
-
-    const isMatch = bcrypt.compare(password, hash);
-
-    return isMatch;
+  private async checkHash(password: string, hash_passowrd: string) : Promise<boolean>{
+    return bcrypt.compare(password, hash_passowrd);
   }
 
 
-  private async change_hash(password: string) : Promise<string>{
-    const hash = await bcrypt.hash(password, passowrd_hash);
-    return hash;
+  private async changeHash(password: string) : Promise<string>{
+    return bcrypt.hash(password, passowrd_hash);
   }
 }
 

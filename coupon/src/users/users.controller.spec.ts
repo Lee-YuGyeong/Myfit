@@ -18,6 +18,7 @@ describe('UsersController', () => {
 
   
   beforeEach(async () => {
+    jest.clearAllMocks();
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
       providers: [
@@ -38,26 +39,21 @@ describe('UsersController', () => {
     expect(userController).toBeDefined();
   });
 
-  describe('회원 저정', () => {
-    it('비밀 번호 해시 처리', async () => {
-      const passowrd_hash = 10;
-      const password = 'password';
-      const hash = await bcrypt.hash(password, passowrd_hash);
-
-      const isMatch = await bcrypt.compare(password, hash);
-
-      expect(isMatch).toBeTruthy();
-    });
-
-    it('회원 저장',()=>{
-      const dto_user = new CreateUserDto();
-
-      dto_user.password = '123';
-      dto_user.username = '테스트 유저';
+  describe('회원 저장 save', () => {
+    it('회원 저장',async ()=>{
+      const dtoUser = new CreateUserDto();
       
-      expect(userController.save(dto_user)).not.toEqual(null);
+      dtoUser.password = 'passowrd';
+      dtoUser.username = '테스트 유저';
 
+      await userController.save(dtoUser);
+
+      expect(dtoUser.username).toEqual('테스트 유저');
+
+      const is_hash = await bcrypt.compare('passowrd', dtoUser.password);
+      expect(is_hash).toBe(true);
     })
   });
 
 });
+
