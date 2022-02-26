@@ -3,7 +3,7 @@ import { UsersController } from './users.controller';
 import { UserRepository } from './users.repository';
 import { UsersService } from './users.service';
 import * as bcrypt from 'bcrypt';
-import { CreateUserDto } from 'src/dto/create-user.dto';
+import { CreateUserDto } from 'src/dto/users/create-user.dto';
 
 describe('UsersController', () => {
   let userController: UsersController;
@@ -41,16 +41,18 @@ describe('UsersController', () => {
 
   describe('회원 저장 save', () => {
     it('회원 저장',async ()=>{
-      const dtoUser = new CreateUserDto();
+      const userDto = new CreateUserDto();
       
-      dtoUser.password = 'passowrd';
-      dtoUser.username = '테스트 유저';
+      userDto.email = 'admin@admin.com';
+      userDto.password = 'passowrd';
+      userDto.username = '테스트 유저';
 
-      await userController.save(dtoUser);
+      await userController.save(userDto);
 
-      expect(dtoUser.username).toEqual('테스트 유저');
+      expect(userDto.username).toEqual('테스트 유저');
+      expect(userDto.email).toEqual('admin@admin.com');
 
-      const is_hash = await bcrypt.compare('passowrd', dtoUser.password);
+      const is_hash = await bcrypt.compare('passowrd', userDto.password);
       expect(is_hash).toBe(true);
     })
   });
