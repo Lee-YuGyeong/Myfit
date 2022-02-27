@@ -1,10 +1,10 @@
-import { Controller, Get, UseGuards ,Request, Post, Body} from '@nestjs/common';
+import { Controller, Get, UseGuards ,Request, Post, Body, HttpStatus, HttpException} from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { CreateUserDto } from 'src/dto/create-user.dto';
+import { CreateUserDto } from 'src/dto/users/create-user.dto';
 import { UsersService } from './users.service';
 import * as bcrypt from 'bcrypt';
 
-const passowrd_hash = 10;
+const HASHKEY = 10;
 
 @Controller('users')
 export class UsersController {
@@ -21,11 +21,16 @@ export class UsersController {
 
     @Post() 
     async save(@Body() createUserDto: CreateUserDto){
-      const hash_password = await this.change_hash(createUserDto.password);
-      createUserDto.password = hash_password;
+      createUserDto.password = await this.changeHash(createUserDto.password);
+      const user = await this.userservice.findOne(createUserDto.email);
+      if (user != undefined){
+        throw new HttpException({
+          status: HttpStatus.BAD_REQUEST,
+          error: '이미 존제하는 회원',
+        }, HttpStatus.BAD_REQUEST);
+      }
       return this.userservice.save(createUserDto);
     }
-
 
     @Get() 
     async findAll(){
@@ -33,18 +38,13 @@ export class UsersController {
     }
 
     
-  private async check_hash(password: string) : Promise<boolean>{
-    const hash = await this.change_hash(password);
-
-    const isMatch = bcrypt.compare(password, hash);
-
-    return isMatch;
+  private async checkHash(password: string, hashPassowrd: string) : Promise<boolean>{
+    return bcrypt.compare(password, hashPassowrd);
   }
 
 
-  private async change_hash(password: string) : Promise<string>{
-    const hash = await bcrypt.hash(password, passowrd_hash);
-    return hash;
+  private async changeHash(password: string) : Promise<string>{
+    return bcrypt.hash(password, 10);
   }
 }
 

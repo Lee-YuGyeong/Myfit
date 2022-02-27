@@ -3,7 +3,7 @@ import { UsersController } from './users.controller';
 import { UserRepository } from './users.repository';
 import { UsersService } from './users.service';
 import * as bcrypt from 'bcrypt';
-import { CreateUserDto } from 'src/dto/create-user.dto';
+import { CreateUserDto } from 'src/dto/users/create-user.dto';
 
 describe('UsersController', () => {
   let userController: UsersController;
@@ -18,6 +18,7 @@ describe('UsersController', () => {
 
   
   beforeEach(async () => {
+    jest.clearAllMocks();
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
       providers: [
@@ -38,26 +39,23 @@ describe('UsersController', () => {
     expect(userController).toBeDefined();
   });
 
-  describe('회원 저정', () => {
-    it('비밀 번호 해시 처리', async () => {
-      const passowrd_hash = 10;
-      const password = 'password';
-      const hash = await bcrypt.hash(password, passowrd_hash);
-
-      const isMatch = await bcrypt.compare(password, hash);
-
-      expect(isMatch).toBeTruthy();
-    });
-
-    it('회원 저장',()=>{
-      const dto_user = new CreateUserDto();
-
-      dto_user.password = '123';
-      dto_user.username = '테스트 유저';
+  describe('회원 저장 save', () => {
+    it('회원 저장',async ()=>{
+      const userDto = new CreateUserDto();
       
-      expect(userController.save(dto_user)).not.toEqual(null);
+      userDto.email = 'admin@admin.com';
+      userDto.password = 'passowrd';
+      userDto.username = '테스트 유저';
 
+      await userController.save(userDto);
+
+      expect(userDto.username).toEqual('테스트 유저');
+      expect(userDto.email).toEqual('admin@admin.com');
+
+      const is_hash = await bcrypt.compare('passowrd', userDto.password);
+      expect(is_hash).toBe(true);
     })
   });
 
 });
+
