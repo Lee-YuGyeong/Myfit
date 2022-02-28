@@ -2,6 +2,7 @@ import { Controller, Get, UseGuards ,Request, Post, Body, HttpStatus, HttpExcept
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { CreateUserDto } from 'src/dto/users/create-user.dto';
 import { UsersService } from './users.service';
+import { lsUserException,emailException} from 'src/exception/users-exception'
 import * as bcrypt from 'bcrypt';
 
 const HASHKEY = 10;
@@ -21,13 +22,15 @@ export class UsersController {
 
     @Post() 
     async save(@Body() createUserDto: CreateUserDto){
+      if (this.ValidateEmail(createUserDto.email) === false){
+        emailException();
+      }
+
       createUserDto.password = await this.changeHash(createUserDto.password);
       const user = await this.userservice.findOne(createUserDto.email);
+
       if (user != undefined){
-        throw new HttpException({
-          status: HttpStatus.BAD_REQUEST,
-          error: '이미 존제하는 회원',
-        }, HttpStatus.BAD_REQUEST);
+        lsUserException();
       }
       return this.userservice.save(createUserDto);
     }
@@ -42,9 +45,21 @@ export class UsersController {
     return bcrypt.compare(password, hashPassowrd);
   }
 
-
+  /**
+   * 비밀번호 해시변환
+   */
   private async changeHash(password: string) : Promise<string>{
     return bcrypt.hash(password, 10);
   }
+  
+  /**
+   * 이메일 유효성 체크
+   */
+  private ValidateEmail(email : string) : boolean{
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
-
