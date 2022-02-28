@@ -9,6 +9,33 @@
         select * from product;
     </select>
 
+    <select id="getProductList" resultType="com.my.myfit.model.dto.ProductModel" parameterType="Integer">
+        select * from product where product_no = #{product_no};;
+    </select>
+
+    <select id="getSearchProductList" resultType="com.my.myfit.model.dto.ProductModel" parameterType="String">
+        select * from product where product_name LIKE CONCAT('%',#{product_name},'%')
+    </select>
+
+
+    <insert id="insertProduct" parameterType="com.my.myfit.model.dto.ProductModel">
+        insert into product(product_name, product_image, product_purchase_count, product_price, product_stock, product_content, category_no)
+        values(#{product_name},#{product_image},#{product_purchase_count},#{product_price},#{product_stock},#{product_content},#{category_no});
+    </insert>
+
+    <update id="updateProduct" parameterType="com.my.myfit.model.dto.ProductModel">
+        update product set product_name=#{product_name},product_image=#{product_image},product_purchase_count=#{product_purchase_count}
+        ,product_price=#{product_price},product_stock=#{product_stock},product_content=#{product_content},category_no=#{category_no}
+        where product_no = #{product_no}
+    </update>
+
+    <delete id="deleteProduct" parameterType="Integer">
+        delete from product where product_no = #{product_no}
+    </delete>
+
+
+
+
 </mapper>
 
 

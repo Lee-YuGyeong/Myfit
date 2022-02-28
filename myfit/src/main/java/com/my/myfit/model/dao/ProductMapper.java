@@ -11,5 +11,9 @@ import java.util.List;
 public interface ProductMapper {
 
     List<ProductModel> getAllProductList();
-
+    ProductModel getProductList(int product_no);
+    List<ProductModel> getSearchProductList(String product_name);
+    public Integer insertProduct(ProductModel dto);
+    public Integer updateProduct(ProductModel dto);
+    public Integer deleteProduct(int product_no);
 }
