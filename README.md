@@ -1,6 +1,5 @@
 # Myfit
 
-
 ## Description
 쇼핑몰 api를 구현하여 api 문서를 자동화하고 배포한다.
 
@@ -16,5 +15,5 @@
 - aws ( ec2 / rds )
 - swagger
 
-# 추후 구현 예정 기능
+## 추후 구현 예정 기능
 - jenkins
