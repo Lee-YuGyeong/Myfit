@@ -46,7 +46,9 @@ export class UsersController {
   }
 
   /**
-   * 비밀번호 해시변환
+   * 비밀번호 해시변경
+   * @param password 
+   * @returns 
    */
   private async changeHash(password: string) : Promise<string>{
     return bcrypt.hash(password, 10);
@@ -54,6 +56,8 @@ export class UsersController {
   
   /**
    * 이메일 유효성 체크
+   * @param email 
+   * @returns 
    */
   private ValidateEmail(email : string) : boolean{
    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
