@@ -1,9 +1,9 @@
 module.exports = {
     "type": "mysql",
-    "host": 'myfit.cmty47wd7cwc.us-east-1.rds.amazonaws.com',
+    "host":  process.env.DB_HOST,
     "port": 3306,
-    "username": "root",
-    "password": "12345678",
+    "username": process.env.DB_USERNAME,
+    "password": process.env.DB_PASSWORD,
     "database": "shop",
     "entities": ["dist/**/*.entity{.ts,.js}"],
     "synchronize": true,
