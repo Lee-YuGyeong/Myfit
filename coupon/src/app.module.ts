@@ -10,8 +10,8 @@ import { ConfigModule } from "@nestjs/config";
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true,
       envFilePath: process.env.NODE_ENV === 'dev' ? '.env.test' : '.env.test',
+      isGlobal: true,
     }),
     TypeOrmModule.forRoot(), AuthModule, UsersModule],
   controllers: [AppController],

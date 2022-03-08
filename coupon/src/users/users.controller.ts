@@ -5,8 +5,6 @@ import { UsersService } from './users.service';
 import { lsUserException,emailException} from 'src/exception/users-exception'
 import * as bcrypt from 'bcrypt';
 
-const HASHKEY = 10;
-
 @Controller('users')
 export class UsersController {
 
