@@ -24,7 +24,7 @@ public class ProductContoller {
             @ApiResponse(responseCode = "404", description = "NOT FOUND !!"),
             @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR !!")
     })
-    @GetMapping("/allProductsssssssss")
+    @GetMapping("/allProducts")
     public List<ProductModel> getAllProduct() {
 
         return productService.getAllProductList();
