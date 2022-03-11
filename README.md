@@ -12,11 +12,9 @@
 - gradle
 - mybatis
 - docker
+- jenkins
 - aws ( ec2 / rds )
 - swagger
-
-## 추후 구현 예정 기능
-- jenkins
 
 ## 추후 개선 사항
 1. RESTful API 네이밍 규칙 준수
