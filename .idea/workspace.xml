@@ -1,54 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a77b4806-e376-4a05-8a42-180a5b2808fb" name="Changes" comment="">
+    <list default="true" id="1b37dcb1-a444-4539-84b9-521dbb9656d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Myfit.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/myfit/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/myfit/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/nest-cli.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/ormconfig.json.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/app.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/app.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/auth/auth.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/auth/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/auth/jwt-auth.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/auth/jwt.strategy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/auth/local-auth.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/auth/local.strategy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/dto/users/create-user.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/exception/users-exception.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/user.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.controller.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/test/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/test/jest-e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/tsconfig.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coupon/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/MyfitApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/controller/ProductContoller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/core/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/model/dao/ProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/model/dto/ProductModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/mybatis/mapper/ProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/test/java/com/my/myfit/MyfitApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfit/src/test/java/com/my/myfit/controller/ProductContollerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/myfit_coupon/composer.json</pharConfigPath>
-    <execution />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="myfit" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="25bugaLYJJkEtnNt9NmBMasoaRE" />
+  <component name="ProjectId" id="25eXPYWoAAf7Q0h4Qh6bgEugB1O" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/myfit" />
-    <property name="settings.editor.selected.configurable" value="MTHome" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\82108\Desktop\git\Myfit\myfit\src\main\resources\mybatis\mapper" />
+      <recent name="C:\Users\82108\Desktop\git\Myfit\myfit\src\main\resources\mybatis" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.my.myfit.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.my.myfit.service" />
+      <recent name="com.my.myfit.model.dao" />
+      <recent name="com.my.myfit.model.dto" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MyfitApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.my.myfit.MyfitApplication" />
+      <module name="myfit.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.my.myfit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="myfit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="myfit" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyfitApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a77b4806-e376-4a05-8a42-180a5b2808fb" name="Changes" comment="" />
-      <created>1645808219159</created>
+      <changelist id="1b37dcb1-a444-4539-84b9-521dbb9656d0" name="Changes" comment="" />
+      <created>1645888512065</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1645808219159</updated>
-      <workItem from="1645808221151" duration="84000" />
+      <updated>1645888512065</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -60,5 +200,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
