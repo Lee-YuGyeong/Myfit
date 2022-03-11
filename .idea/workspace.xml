@@ -5,60 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b37dcb1-a444-4539-84b9-521dbb9656d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Myfit.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/nest-cli.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/ormconfig.json.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/app.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/app.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/auth/auth.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/auth/auth.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/auth/jwt-auth.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/auth/jwt.strategy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/auth/local-auth.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/auth/local.strategy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/dto/users/create-user.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/exception/users-exception.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/user.entity.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.controller.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.repository.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/src/users/users.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/test/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/test/jest-e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/tsconfig.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coupon/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/MyfitApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/controller/ProductContoller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/core/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/model/dao/ProductMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/model/dto/ProductModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/service/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/java/com/my/myfit/service/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/mybatis/mapper/ProductMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/test/java/com/my/myfit/MyfitApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfit/src/test/java/com/my/myfit/controller/ProductContollerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +75,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -204,5 +155,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/myfit$MyfitApplication.ic" NAME="MyfitApplication Coverage Results" MODIFIED="1646987781033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.my.myfit.*</FILTER>
+    </SUITE>
   </component>
 </project>
